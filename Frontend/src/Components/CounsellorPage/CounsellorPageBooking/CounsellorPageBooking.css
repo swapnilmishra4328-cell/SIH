@@ -1,0 +1,99 @@
+.counsellor-dashboard-wrapper {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto; /* only this part scrolls */
+  max-width: 1100px;
+  margin: 50px auto;
+  background: #f9fafc;
+  margin-left: 23px;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.session-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.session-card p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.session-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.session-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.session-actions button:hover {
+  opacity: 0.9;
+}
+
+.session-actions button:nth-child(1) {
+  background: #007bff;
+  color: white;
+}
+
+.session-actions button:nth-child(2) {
+  background: #28a745;
+  color: white;
+}
+
+.session-actions button:nth-child(3) {
+  background: #dc3545;
+  color: white;
+}
+
+/* Status colors */
+.status {
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.inprogress {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}

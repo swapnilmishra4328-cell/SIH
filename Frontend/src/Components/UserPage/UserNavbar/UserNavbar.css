@@ -1,0 +1,110 @@
+.user-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.user-sidebar-expanded {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+.user-sidebar-collapsed {
+  margin-left: 80px;
+  transition: margin-left 0.3s ease;
+}
+
+.user-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-navbar {
+  height: 80px;
+  width: calc(100% - 40px);
+  background-color: #fff;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3.66px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.user-sidebar-expanded .user-navbar {
+  width: calc(100% - 290px);
+}
+
+.user-sidebar-collapsed .user-navbar {
+  margin-left: 25px;
+  width: calc(100% - 120px);
+}
+
+.user-navbar-icon {
+  position: absolute;
+  top: -60px;
+  left: 20px;
+}
+
+.user-navbar-icon img {
+  height: 180px;
+  width: 180px;
+  margin-top: 5px;
+  object-fit: contain;
+}
+
+.user-navbar-text {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.user-navbar-text p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.2s;
+}
+
+.user-navbar-text p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #0C7FDA;
+  transition: width 0.3s ease-in-out;
+}
+
+.user-navbar-text p:hover {
+  color: #0C7FDA;
+}
+
+.user-navbar-text p:hover::after {
+  width: 100%;
+}
+
+.user-signup {
+  background-color: #E9F5FE;
+  color: #0C7FDA;
+  padding: 7px 35px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.user-signup p::after {
+  display: none;
+}

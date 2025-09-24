@@ -1,0 +1,381 @@
+.top-header-section {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: #ffffff;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-logo {
+  height: 40px;
+  margin-right: 0.75rem;
+}
+
+.brand-name { 
+  font-size: 1.8rem;
+  font-weight: 700; 
+  color: #333;
+}
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.intro-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-image-container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.intro-text-container {
+  flex: 1;
+  text-align: left;
+}
+
+.intro-text-container p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+}
+
+.intro-text-container p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-text-container em {
+  color: #007bff;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.challenges-solutions-section {
+  background-color: #f8f9fa;
+  padding: 5rem 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.challenges-container {
+  max-width: 1200px; 
+  margin: auto;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 2rem; 
+}
+
+.challenges-container h2 {
+  grid-column: 1 / -1; 
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.challenge-item {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  display: flex; 
+  flex-direction: column;
+}
+
+.challenge-item h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 0.75rem;
+}
+
+.challenge-item .challenge-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  flex-grow: 1; 
+}
+
+.challenge-item .solution-desc {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 1rem; 
+}
+
+.challenge-item .solution-desc strong {
+  color: #007bff;
+}
+
+.result-text {
+  grid-column: 1 / -1; 
+  font-size: 1.3rem;
+  margin-top: 4rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.result-text strong {
+  color: #007bff;
+}
+
+.landing-page {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: #007bff;
+  color: #ffffff;
+}
+
+.hero-section {
+  padding: 5rem 1rem;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-title .highlight {
+  color: inherit;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.role-card {
+  background: #ffffff;
+  color: #1f2937;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+.card-content {
+  padding: 0 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: #6b7280;
+    line-height: 1.5;
+    min-height: 60px;
+}
+
+.icon-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2998ff;
+}
+
+.icon-lg {
+  font-size: 2.5rem;
+}
+
+.card-points {
+  margin: 1.5rem 0;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #495057;
+  margin-bottom: 0.8rem;
+}
+.point .icon-sm {
+  font-size: 1.2rem;
+  color: #2998ff;
+}
+
+.cta-btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #2998ff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.cta-btn:hover {
+  opacity: 0.9;
+}
+
+.features-section {
+  background: #f3f4f6;
+  padding: 5rem 1rem;
+  color: #1f2937;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.features-header p {
+  color: #6b7280;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  margin: auto auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(41, 152, 255, 0.1);
+  color: #2998ff;
+}
+
+@media (max-width: 900px) {
+  .intro-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .intro-text-container {
+    text-align: center;
+  }
+  .top-header-section {
+    justify-content: center;
+  }
+  .challenges-container {
+    grid-template-columns: 1fr; 
+  }
+  .challenges-container h2 {
+    font-size: 2rem;
+  }
+  .challenge-item h3 {
+    font-size: 1.4rem;
+  }
+  .challenge-item .challenge-desc,
+  .challenge-item .solution-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .role-cards {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}

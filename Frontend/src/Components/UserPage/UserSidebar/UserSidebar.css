@@ -1,0 +1,84 @@
+.user-sidebar {
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.user-sidebar.user-collapsed {
+  width: 80px;
+  padding: 1.2rem;
+}
+
+.user-sidebar.user-expanded {
+  width: 230px;
+  padding: 1rem 1rem;
+}
+
+.user-sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.user-sidebar-header img {
+  width: 40px;
+  height: 40px;
+}
+
+.user-sidebar-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.user-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-sidebar-item,
+.user-sidebar-theme,
+.user-sidebar-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-sidebar-item:hover,
+.user-sidebar-theme:hover,
+.user-sidebar-logout:hover {
+  background-color: #e9f5fe;
+}
+
+.user-sidebar-item img,
+.user-sidebar-theme img,
+.user-sidebar-logout img {
+  width: 25px;
+  height: 25px;
+}
+
+.user-sidebar-logout {
+  background-color: #667a8a;
+  color: #fff;
+  border-radius: 6px;
+}
