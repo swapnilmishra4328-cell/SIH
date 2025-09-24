@@ -1,0 +1,130 @@
+/* Sidebar container */
+.sidebar {
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  background-color: #0C7FDA !important; /* clean light gray */
+  padding: 20px 15px !important;
+  border-right: 1px solid #e0e0e0 !important; /* subtle separation */
+}
+
+/* All icons */
+.sidebar img {
+  width: 18px !important;   /* smaller and uniform */
+  height: 18px !important;
+  object-fit: contain !important;
+}
+
+/* Menu (hamburger) icon */
+.sidebar .menu {
+  display: block !important;
+  margin-left: 8px !important;
+  cursor: pointer !important;
+  opacity: 0.8 !important;
+  transition: transform 0.2s ease !important;
+}
+
+.sidebar .menu:hover {
+  transform: scale(1.1) !important;
+  opacity: 1 !important;
+}
+
+/* New Chat button */
+.sidebar .new-chat {
+  margin-top: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 14px !important;
+  background-color: black !important; /* light blue for CTA */
+  border-radius: 30px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: white !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.sidebar .new-chat:hover {
+  background-color: #d2e3fc !important;
+  color: #444 !important;
+}
+
+/* Recent section */
+.sidebar .recent {
+  display: flex !important;
+  flex-direction: column !important;  
+  margin-top: 25px !important;
+}
+
+.sidebar .recent-title {
+  margin: 10px 0 15px 5px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: black !important;
+}
+
+.sidebar .recent-entry {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 12px !important;
+  border-radius: 20px !important;
+  font-size: 14px !important;
+  color: black !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.sidebar .recent-entry p {
+    color: #333;
+}
+
+.sidebar .recent-entry:hover {
+  background-color: #d2e3fc !important;
+}
+
+/* Bottom section */
+.sidebar .bottom {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  margin-top: auto !important;
+}
+
+.sidebar .exit-button {
+  margin-top: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 14px !important;
+  background-color: #d2e3fc !important; /* light blue for CTA */
+  border-radius: 30px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: black !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.sidebar .exit-button:hover {
+  background-color: grey !important;
+}
+
+.sidebar .bottom-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 12px !important;
+  border-radius: 20px !important;
+  font-size: 14px !important;
+  color: #444 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.sidebar .bottom-item:hover {
+  background-color: #d2e3fc !important;
+}
+

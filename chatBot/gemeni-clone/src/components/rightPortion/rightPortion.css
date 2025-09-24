@@ -1,0 +1,66 @@
+/* Right Panel container */
+.right-panel {
+  min-height: 100vh !important;
+  width: 260px !important;   /* fixed width */
+  background-color: #f9fafc !important; /* clean, lighter than sidebar */
+  border-left: 1px solid #e0e0e0 !important; /* subtle divider */
+  padding: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+/* Top Section: Assistant Info */
+.right-panel .assistant-info {
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+.right-panel .assistant-info h3 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  color: #333 !important;
+}
+
+.right-panel .assistant-info p {
+  font-size: 13px !important;
+  color: #555 !important;
+  line-height: 1.5 !important;
+}
+
+/* Suggested Prompts / Tips */
+.right-panel .suggestions {
+  margin-top: 20px !important;
+}
+
+.right-panel .suggestions h4 {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #444 !important;
+  margin-bottom: 10px !important;
+}
+
+.right-panel .suggestion {
+  padding: 10px 12px !important;
+  background-color: #f1f5fb !important;
+  border-radius: 10px !important;
+  margin-bottom: 10px !important;
+  font-size: 13px !important;
+  color: #333 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.right-panel .suggestion:hover {
+  background-color: grey !important;
+}
+
+/* Bottom Section */
+.right-panel .footer {
+  text-align: center !important;
+  font-size: 12px !important;
+  color:  black!important;
+  padding-top: 15px !important;
+  border-top: 1px solid black !important;
+}
