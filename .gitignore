@@ -38,11 +38,11 @@ backend/logs/
 # ----------------------------
 # Frontend (React/Vite/Next)
 # ----------------------------
-frontend/node_modules/
+Frontend/node_modules/
 frontend/dist/
 frontend/build/
-frontend/.env
-frontend/.env.local
+Frontend/.env
+Frontend/.env.local
 frontend/.vercel
 frontend/.next
 frontend/out/
