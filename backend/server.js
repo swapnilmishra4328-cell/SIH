@@ -25,8 +25,8 @@ connectCloudinary();
 // Middlewares
 app.use(express.json())
 app.use(cors({ origin: 
-  ["http://localhost:5173", 
-  "http://localhost:5174"], credentials: true }))
+  ["https://frontend-1ioz.onrender.com", 
+  "https://aichatbot-raim.onrender.com"], credentials: true }))
 app.use(bodyParser.json())
 
 // api endpoints
