@@ -11,7 +11,7 @@ const CounsellorPageBooking = () => {
   useEffect(() => {
     const fetchSessions = async () => {
       try {
-        const res = await fetch(`http://localhost:4000/api/session/counsellor/${counsellorId}`);
+        const res = await fetch(`https://backend-0e93.onrender.com/api/session/counsellor/${counsellorId}`);
         const data = await res.json();
         setSessions(data);
       } catch (err) {
