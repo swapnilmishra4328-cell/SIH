@@ -39,7 +39,7 @@ const UserSidebar = () => {
 
            <div
             className="user-sidebar-item"
-             onClick={() => window.location.href = "http://localhost:5174"}
+             onClick={() => window.location.href = "https://aichatbot-raim.onrender.com"}
           >
             <img src={Chatbot} alt="booking" />
             {expanded && <p>AI Chatbot</p>}
