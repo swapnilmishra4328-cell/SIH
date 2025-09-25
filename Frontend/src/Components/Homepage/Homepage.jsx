@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import {HashLink} from "react-router-hash-link"
 import './Homepage.css';
 
 import logo from '../../assets/ThinkFitimage.png';
@@ -10,6 +11,11 @@ const Homepage = () => {
       <header className="top-header-section">
         <img src={logo} alt="ThinkFit Logo" className="header-logo" />
         <span className="brand-name">Thinkfit</span>
+        <div className="header-second-part">
+          <HashLink to="#challenges-section">About Us</HashLink> 
+          <HashLink to="#user-role-card">User</HashLink>       
+          <HashLink to="#counselor-role-card">Counsellor</HashLink> 
+        </div>
       </header>
 
       <section className="intro-section">
@@ -87,9 +93,10 @@ const Homepage = () => {
                 Connect with licensed mental health professionals through our
                 secure platform. Get the support you need, when you need it.
               </p>
-              <div className="role-cards">
+  <div className="role-cards">
+
   {/* User Card */}
-  <div className="role-card">
+  <div className="role-card" id="user-role-card">
     <div className="card-header">
       <div className="icon-circle">
         <span role="img" aria-label="users" className="icon-lg">👥</span>
@@ -120,8 +127,9 @@ const Homepage = () => {
     </div>
   </div>
 
-  {/* Counselor Card (Now with the same classes as User Card) */}
-  <div className="role-card">
+
+  {/* Counsellor Card */}
+  <div className="role-card" id="counselor-role-card">
     <div className="card-header">
       <div className="icon-circle">
         <span role="img" aria-label="brain" className="icon-lg">🧠</span>
@@ -146,14 +154,47 @@ const Homepage = () => {
           <span>Session scheduling</span>
         </div>
       </div>
-      <Link to="/counselor/login">
-        <button className="cta-btn">
-          Continue as Counselor
-        </button>
+      <Link to="/counsellor/dashboard">
+        <button className="cta-btn">Continue as Counsellor</button>
       </Link>
     </div>
   </div>
+
+
+  {/* 🔹 Admin Card */}
+  <div className="role-card" id="admin-role-card">
+    <div className="card-header">
+      <div className="icon-circle">
+        <span role="img" aria-label="gear" className="icon-lg">⚙️</span>
+      </div>
+      <h3 className="card-title">Admin Panel</h3>
+      <p className="card-description">
+        Oversee the platform, manage users, and ensure smooth operations
+      </p>
+    </div>
+    <div className="card-content">
+      <div className="card-points">
+        <div className="point">
+          <span role="img" aria-label="monitor" className="icon-sm">📊</span>
+          <span>Dashboard & analytics</span>
+        </div>
+        <div className="point">
+          <span role="img" aria-label="users" className="icon-sm">👤</span>
+          <span>Manage users & counselors</span>
+        </div>
+        <div className="point">
+          <span role="img" aria-label="shield" className="icon-sm">🔒</span>
+          <span>Ensure security & compliance</span>
+        </div>
+      </div>
+      <Link to="/admin">
+        <button className="cta-btn">Continue as Admin</button>
+      </Link>
+    </div>
+  </div>
+
 </div>
+
             </div>
           </div>
         </section>

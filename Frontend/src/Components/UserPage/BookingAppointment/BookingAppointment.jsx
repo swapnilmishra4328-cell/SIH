@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./BookingAppointment.css";
 
 const BookingAppointment = () => {
@@ -21,6 +23,7 @@ const BookingAppointment = () => {
       setBookings(data);
     } catch (err) {
       console.error("❌ Fetch error:", err);
+      toast.error("Failed to fetch sessions");
     } finally {
       setLoading(false);
     }
@@ -30,9 +33,9 @@ const BookingAppointment = () => {
     fetchBookings();
   }, []);
 
-  // 🔹 Confirm or Update booking
+  // 🔹 Handle booking creation/update
   const handleConfirm = async () => {
-    if (!problem || !date) return alert("⚠️ Please fill all fields");
+    if (!problem || !date) return toast.warn("Please fill all fields");
 
     try {
       if (editId) {
@@ -44,9 +47,13 @@ const BookingAppointment = () => {
         });
 
         if (res.ok) {
-          alert("✅ Booking updated!");
+          toast.success("Booking updated successfully!");
           await fetchBookings();
+        } else {
+          const errData = await res.json();
+          toast.error(errData.message || "Failed to update booking");
         }
+
         setEditId(null);
       } else {
         // New booking
@@ -62,27 +69,30 @@ const BookingAppointment = () => {
         });
 
         if (res.ok) {
-          alert("✅ Session booked successfully!");
+          toast.success("Session booked successfully!");
           await fetchBookings();
+        } else {
+          const errData = await res.json();
+          toast.error(errData.message || "Failed to book session");
         }
       }
     } catch (err) {
       console.error("❌ Booking error:", err);
-      alert("⚠️ Failed to book session");
+      toast.error("Something went wrong!");
     }
 
     setProblem("");
     setDate("");
   };
 
-  // 🔹 Edit Booking
+  // 🔹 Edit booking
   const handleEdit = (booking) => {
     setProblem(booking.sessionName);
     setDate(booking.date.split("T")[0]);
     setEditId(booking._id);
   };
 
-  // 🔹 Delete Booking
+  // 🔹 Delete booking
   const handleDelete = async (id) => {
     try {
       const res = await fetch(`http://localhost:4000/api/session/${id}`, {
@@ -90,12 +100,22 @@ const BookingAppointment = () => {
       });
 
       if (res.ok) {
-        alert("🗑️ Session deleted");
+        toast.success("Session deleted successfully!");
         await fetchBookings();
+      } else {
+        const errData = await res.json();
+        toast.error(errData.message || "Failed to delete session");
       }
     } catch (err) {
       console.error("❌ Delete error:", err);
+      toast.error("Something went wrong!");
     }
+  };
+
+  // 🔹 Handle form submit to prevent refresh
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleConfirm();
   };
 
   return (
@@ -103,7 +123,7 @@ const BookingAppointment = () => {
       <h1 className="booking-title">Book a Session</h1>
 
       {/* Form */}
-      <div className="booking-form">
+      <form className="booking-form" onSubmit={handleSubmit}>
         <div className="booking-input-group">
           <label>Problem</label>
           <input
@@ -123,10 +143,10 @@ const BookingAppointment = () => {
           />
         </div>
 
-        <button className="booking-btn" onClick={handleConfirm}>
+        <button type="submit" className="booking-btn">
           {editId ? "Update Booking" : "Confirm Booking"}
         </button>
-      </div>
+      </form>
 
       {/* Sessions */}
       <h2 className="booking-subtitle">My Sessions</h2>
@@ -147,9 +167,10 @@ const BookingAppointment = () => {
               </div>
 
               <div className="booking-actions">
-                <button onClick={() => handleEdit(b)}>Edit</button>
-                <button onClick={() => handleDelete(b._id)}>Delete</button>
+                <button type="button" onClick={() => handleEdit(b)}>Edit</button>
+                <button type="button" onClick={() => handleDelete(b._id)}>Delete</button>
                 <button
+                  type="button"
                   onClick={() =>
                     navigate("/AvailbleCounsellor", {
                       state: { problem: b.sessionName, date: b.date },
