@@ -18,7 +18,7 @@ const BookingAppointment = () => {
   const fetchBookings = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`http://localhost:4000/api/session/user/${userId}`);
+      const res = await fetch(`https://backend-0e93.onrender.com/api/session/user/${userId}`);
       const data = await res.json();
       setBookings(data);
     } catch (err) {
@@ -40,7 +40,7 @@ const BookingAppointment = () => {
     try {
       if (editId) {
         // Update booking
-        const res = await fetch(`http://localhost:4000/api/session/${editId}`, {
+        const res = await fetch(`https://backend-0e93.onrender.com/api/session/${editId}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ sessionName: problem, date }),
@@ -57,7 +57,7 @@ const BookingAppointment = () => {
         setEditId(null);
       } else {
         // New booking
-        const res = await fetch("http://localhost:4000/api/session/book", {
+        const res = await fetch("https://backend-0e93.onrender.com/api/session/book", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -95,7 +95,7 @@ const BookingAppointment = () => {
   // 🔹 Delete booking
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:4000/api/session/${id}`, {
+      const res = await fetch(`https://backend-0e93.onrender.com/api/session/${id}`, {
         method: "DELETE",
       });
 
