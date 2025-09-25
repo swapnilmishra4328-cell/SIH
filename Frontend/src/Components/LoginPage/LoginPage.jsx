@@ -11,7 +11,7 @@ const LoginPage = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:4000/api/user/login", {
+      const res = await axios.post("https://backend-0e93.onrender.com/api/user/login", {
         email: data.email,
         password: data.password,
       }, { withCredentials: true });
