@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
-import {HashLink} from "react-router-hash-link"
+import { HashLink } from 'react-router-hash-link'; 
 import './Homepage.css';
 
 import logo from '../../assets/ThinkFitimage.png';
 import mainimage from "../../assets/First_page_image.png";
 
-const Homepage = () => {
+const Mainpage = () => {
   return (
     <>
       <header className="top-header-section">
-        <img src={logo} alt="ThinkFit Logo" className="header-logo" />
-        <span className="brand-name">Thinkfit</span>
+        <div className="header-thinkfit">
+          <img src={logo} alt="ThinkFit Logo" className="header-logo" />
+          <span className="brand-name">Thinkfit</span>
+        </div>
         <div className="header-second-part">
           <HashLink to="#challenges-section">About Us</HashLink> 
           <HashLink to="#user-role-card">User</HashLink>       
@@ -24,14 +26,15 @@ const Homepage = () => {
             <img src={mainimage} alt="Wellness Platform" />
           </div>
           <div className="intro-text-container">
-            <p>We're building an <em>Integrated Campus Wellness Platform</em>—not just an app.</p>
-            <p><strong>For students</strong>, it's a hub with an AI Chatbot, confidential counselor booking, and mental health resources.</p>
-            <p><strong>For administration</strong>, it provides an <em>Anonymous data dashboard</em> to track and improve campus well-being.</p>
+            <p>We're building an <em>Integrated Campus Wellness Platform</em> not just an app.</p>
+            <p><strong>For students</strong>, it's a hub with an AI Chatbot, confidential counsellor booking, and mental health resources.</p>
+            <p><strong>For administration</strong>, it provides an <em>Anonymous Data Dashboard</em> to track and improve campus well-being.</p>
           </div>
         </div>
       </section>
 
-      <section className="challenges-solutions-section">
+
+      <section className="challenges-solutions-section" id="challenges-section">
         <div className="challenges-container">
           <h2>Challenges We Address</h2>
 
@@ -70,7 +73,6 @@ const Homepage = () => {
             <p className="solution-desc">👉 ThinkFit builds resilience and mindfulness practices handle pressure.</p>
           </div>
 
-          
           <p className="result-text">✨ <strong>Result:</strong> By removing these barriers, ThinkFit ensures students access the right support at the right time, leading to healthier, happier, and more productive lives.</p>
         </div>
       </section>
@@ -93,76 +95,74 @@ const Homepage = () => {
                 Connect with licensed mental health professionals through our
                 secure platform. Get the support you need, when you need it.
               </p>
-  <div className="role-cards">
+              <div className="role-cards">
+                
+                <div className="role-card" id="user-role-card">
+                  <div className="card-header">
+                    <div className="icon-circle">
+                      <span role="img" aria-label="users" className="icon-lg">👥</span>
+                    </div>
+                    <h3 className="card-title">I need support</h3>
+                    <p className="card-description">
+                      Book sessions with licensed counselors and access AI-powered support
+                    </p>
+                  </div>
+                  <div className="card-content">
+                    <div className="card-points">
+                      <div className="point">
+                        <span role="img" aria-label="calendar" className="icon-sm">📅</span>
+                        <span>Book counseling sessions</span>
+                      </div>
+                      <div className="point">
+                        <span role="img" aria-label="chat bubble" className="icon-sm">💬</span>
+                        <span>24/7 AI chat support</span>
+                      </div>
+                      <div className="point">
+                        <span role="img" aria-label="shield" className="icon-sm">🛡️</span>
+                        <span>Secure & confidential</span>
+                      </div>
+                    </div>
+                    <Link to="/user/login">
+                      <button className="cta-btn">Continue as User</button>
+                    </Link>
+                  </div>
+                </div>
+               
+            
+                <div className="role-card" id="counselor-role-card">
+                  <div className="card-header">
+                    <div className="icon-circle">
+                      <span role="img" aria-label="brain" className="icon-lg">🧠</span>
+                    </div>
+                    <h3 className="card-title">I'm a counselor</h3>
+                    <p className="card-description">
+                      Manage your practice and provide professional mental health support
+                    </p>
+                  </div>
+                  <div className="card-content">
+                    <div className="card-points">
+                      <div className="point">
+                        <span role="img" aria-label="users" className="icon-sm">👥</span>
+                        <span>Manage patient sessions</span>
+                      </div>
+                      <div className="point">
+                        <span role="img" aria-label="chat bubble" className="icon-sm">💬</span>
+                        <span>Real-time chat system</span>
+                      </div>
+                      <div className="point">
+                        <span role="img" aria-label="calendar" className="icon-sm">📅</span>
+                        <span>Session scheduling</span>
+                      </div>
+                    </div>
+                    <Link to="/counsellor">
+                      <button className="cta-btn">
+                        Continue as Counsellor
+                      </button>
+                    </Link>
+                  </div>
+                </div>
 
-  {/* User Card */}
-  <div className="role-card" id="user-role-card">
-    <div className="card-header">
-      <div className="icon-circle">
-        <span role="img" aria-label="users" className="icon-lg">👥</span>
-      </div>
-      <h3 className="card-title">I need support</h3>
-      <p className="card-description">
-        Book sessions with licensed counselors and access AI-powered support
-      </p>
-    </div>
-    <div className="card-content">
-      <div className="card-points">
-        <div className="point">
-          <span role="img" aria-label="calendar" className="icon-sm">📅</span>
-          <span>Book counseling sessions</span>
-        </div>
-        <div className="point">
-          <span role="img" aria-label="chat bubble" className="icon-sm">💬</span>
-          <span>24/7 AI chat support</span>
-        </div>
-        <div className="point">
-          <span role="img" aria-label="shield" className="icon-sm">🛡️</span>
-          <span>Secure & confidential</span>
-        </div>
-      </div>
-      <Link to="/login">
-        <button className="cta-btn">Continue as User</button>
-      </Link>
-    </div>
-  </div>
-
-
-  {/* Counsellor Card */}
-  <div className="role-card" id="counselor-role-card">
-    <div className="card-header">
-      <div className="icon-circle">
-        <span role="img" aria-label="brain" className="icon-lg">🧠</span>
-      </div>
-      <h3 className="card-title">I'm a counselor</h3>
-      <p className="card-description">
-        Manage your practice and provide professional mental health support
-      </p>
-    </div>
-    <div className="card-content">
-      <div className="card-points">
-        <div className="point">
-          <span role="img" aria-label="users" className="icon-sm">👥</span>
-          <span>Manage patient sessions</span>
-        </div>
-        <div className="point">
-          <span role="img" aria-label="chat bubble" className="icon-sm">💬</span>
-          <span>Real-time chat system</span>
-        </div>
-        <div className="point">
-          <span role="img" aria-label="calendar" className="icon-sm">📅</span>
-          <span>Session scheduling</span>
-        </div>
-      </div>
-      <Link to="/counsellor/dashboard">
-        <button className="cta-btn">Continue as Counsellor</button>
-      </Link>
-    </div>
-  </div>
-
-
-  {/* 🔹 Admin Card */}
-  <div className="role-card" id="admin-role-card">
+                 <div className="role-card" id="admin-role-card">
     <div className="card-header">
       <div className="icon-circle">
         <span role="img" aria-label="gear" className="icon-lg">⚙️</span>
@@ -193,8 +193,7 @@ const Homepage = () => {
     </div>
   </div>
 
-</div>
-
+              </div>
             </div>
           </div>
         </section>
@@ -245,4 +244,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Mainpage;
