@@ -40,7 +40,7 @@ const Sidebar = () => {
             <img src={assets.setting_icon} alt="" />
             {extended?<p>Setting</p>:null}
            </div>
-           <div className="exit-button" onClick={() => window.location.href = "http://localhost:5173/user/userdashboard"}>
+           <div className="exit-button" onClick={() => window.location.href = "https://frontend-1ioz.onrender.com/user/userdashboard"}>
             <img src={assets.back_icon} alt="" />
             {extended?<p>Return</p>:null}
            </div>
