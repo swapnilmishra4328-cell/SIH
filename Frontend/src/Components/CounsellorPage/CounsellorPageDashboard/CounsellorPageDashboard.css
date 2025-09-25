@@ -22,19 +22,17 @@
 .dashboard-row {
   display: flex;
   flex-direction: column; 
-  gap: 1.5rem;
+  gap: 1rem;
   width: 100%;
-  align-items: stretch;
 }
 
 
 .dashboard-card {
   background-color: #c5dae1;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 3.66px;
   display: flex;                 
   align-items: center;
-  gap: 1rem;                     
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
 }
@@ -91,7 +89,7 @@
 .sessions-box {
   flex: 1;
   background: #f5f5f5;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 3.66px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
@@ -152,10 +150,10 @@
   font-size: 0.75rem;
 }
 .insights-card {
-  flex: 1;
+flex: 1;
   background: linear-gradient(to right, #2563eb, #1e40af);
   color: white;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 3.66px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
