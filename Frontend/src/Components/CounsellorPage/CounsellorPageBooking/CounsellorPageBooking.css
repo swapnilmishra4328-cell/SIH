@@ -1,12 +1,14 @@
 .counsellor-dashboard-wrapper {
-  flex: 1;
-  padding: 40px;
-  overflow-y: auto; /* only this part scrolls */
-  max-width: 1100px;
-  margin: 50px auto;
-  background: #f9fafc;
-  margin-left: 23px;
-  border-radius: 5px;
+   background-color: white;
+  min-height: 75vh;
+  width: 91.5%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 1.4rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 3.66px;
 }
 
 h1 {
