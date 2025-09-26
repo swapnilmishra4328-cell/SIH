@@ -26,7 +26,7 @@ const CounsellorPageBooking = () => {
   // 🔑 Update session status
   const handleStatusChange = async (sessionId, newStatus) => {
     try {
-      const res = await fetch(`http://localhost:4000/api/session/${sessionId}/status`, {
+      const res = await fetch(`https://backend-0e93.onrender.com/api/session/${sessionId}/status`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
